@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="project-img/logo.avif" type="image/x-icon">
+  <!-- File path links -->
+  <link rel="stylesheet" href="second-loader.css">
+  <link rel="stylesheet" href="main-css.css">
+  <link rel="stylesheet" href="Big-text.css">
+  <link rel="stylesheet" href="gallery.css">
+
+  <!-- <link rel="stylesheet" href="navbar.css"> error -->
+
+  <!-- vendors links -->
+  <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"> local file path cancel -->
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="vendor/animate-css/animate.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome-free-6.2.1-web/css/all.min.css">
+  <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="vendor/aos/aos.css">
+
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!--  link boostrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+</head>
+<style>
+  .navbar {
+    margin-top: 20px;
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    background-color: transparent;
+    z-index: 4;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 4px;
+    font-family: Montserrat, sans-serif;
+  }
+
+  .navbar-nav a {
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    text-decoration: none;
+    position: relative;
+    text-align: 12px;
+    margin: 0px 20px;
+
+    font-weight: 12px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+
+
+
+  .navbar-collapse>div>a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: yellowgreen;
+
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+
+  .navbar-collapse>div>a:hover:before,
+  .navbar-nav #about::before {
+    visibility: visible;
+    width: 90%;
+  }
+
+
+
+  .navbar-collapse>div>a:hover,
+  .navbar-nav #about {
+    color: #fff;
+  }
+
+  @media (max-width: 800px) {
+    .navbar-nav #about {
+      color: rgb(254, 255, 253);
+      font-size: 15px;
+      background-color: transparent;
+      width: auto;
+      text-align: left;
+    }
+
+    .navbar-nav a {
+      margin-top: 10px;
+      text-align: left 2px;
+    }
+
+    .navbar-collapse>div>a:hover {
+      visibility: visible;
+      width: max-content;
+    }
+  }
+
+  /* LOGO */
+  .navbar-brand {
+    font-size: 20px;
+    color: #fff;
+
+  }
+
+  .navbar-brand:hover {
+    color: yellowgreen;
+  }
+
+  .navbar-brand span {
+    font-size: large;
+    color: yellowgreen;
+  }
+
+  /* Birds */
+  #bird1 {
+    position: absolute;
+    height: auto;
+    width: auto;
+
+    display: inline-block;
+  }
+
+  #bird2 {
+    position: absolute;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    margin-bottom: 10px;
+
+  }
+
+  @media (max-width: 1000px) {
+    #bird2 {
+      right: 80px;
+    }
+  }
+
+
+
+</style>
+
+<body>
+
+
+  <!-- Loader -->
+  <!-- Loading Area -->
+  <div class="loading-area" id="loadingArea">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- End Loader -->
+
+
+ 
+
+  <!--Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          
+          <h4><i class="bi bi-globe-asia-australia"></i>NATURE  <span>✓</span></h4>  
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto" id="a-link">
+            <a class="nav-link active" aria-current="page" id="about" href="#about">ABOUT</a>
+            <a class="nav-link" href="#services">SERVICES</a>
+            <a class="nav-link" href="#alt-services">ADVENTURE✨</a>
+            <a class="nav-link" href="#our-team">OUR TEAM</a>
+            <a class="nav-link" href="#contact">DONATION❤️</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- End Header -->
+
+  <!--      Hero Section       -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down" data-aos-delay="200">Nature <span class="auto-type"></span></h2>
+            <p data-aos="fade-up">“ Look Deeply Into Nature <br>
+               And then You Will Understand <br>
+                All Things Better ”</p>
+            <a data-aos="fade-up" data-aos-delay="200" style="text-decoration:none;" href="#get-started"
+              class="btn-get-started">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(project-img/tumble.webp)"></div>
+      <div class="carousel-item" style="background-image: url(project-img/Replace.jpg)"></div>
+
+
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" style="text-decoration:none;"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" style="text-decoration:none;"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+
+  </section>
+  
+
+
+
+  <!-- End Hero Section -->
+
+
+  <!--             Main          -->
+
+
+  <main id="main" class="start" style="background-color: rgb(255, 251, 251)">
+
+
+    <!--       POEMS Section      -->
+
+    <section id="POEMS" class="POEMS" style="background-color: rgb(66, 66, 66)">
+      <div class="container" id="get-started" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2 style="color: #e4e4e4;" data-aos="fade-down" data-aos-delay="300">SEASONS</h2>
+          <p data-aos="fade-up">Summer season, during which the weather is hot. Monsoon season, during which it rains. Winter season, during which the weather is cold.
+             Autumn season, during which the plants shed their leaves.</p>
+        </div>
+
+        <div class="row gy-4" style="box-shadow: black;">
+
+          <div class="col-lg-6   " data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(project-img/div1.gif);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body" style="background-color: rgb(251, 251, 251);">
+                    <h4 style="color: yellowgreen;" class="card-title">Flowers In The Rain</h4>
+                    <p style="color: green">Poetry is like flowers in the rain <br>
+                      Petals disperse it's fragrance in the breeze. <br>
+                      Words flow soaked in the smell of wet mud.
+                      The pleasant smell spreads in the minds.
+                      And charm sways in the nature of poetry.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6   " data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(project-img/div2.gif);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 style="color: rgb(161, 0, 0);" class="card-title">There is a subtle magic in the falling of old leaves.</h4>
+                    <p style="color: rgb(86, 0, 0);">
+                      Anyone who Thinks fallen 
+                      leaves are dead has never watched them 
+                      dancing on a windy day. There is something incredibly
+                      nostalgic and significant about the annual cascade of autumn leaves.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6   " data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(project-img/div3.gif);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 style="color: rgb(26, 26, 119);" class="card-title">The Weight of Winter Trees</h4>
+                    <p style="color: rgb(47, 47, 161);">Trees in Winter lose their leaves.Some trees may even fall during storms,
+                      but most stand patiently and bear their fortune.
+                    Even if one tree falls down it wouldn't affect the entire forest.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6   " data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(project-img/div4.gif);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 style="color: rgb(78, 0, 88);" class="card-title">Magical Nature of Plants</h4>
+                    <p style="color: rgb(66, 26, 69);">
+                    Just feel the Magic in the air and the power in the breeze,
+                  Feel the Energy of the plants, the bushes and the trees,
+                Let yourself be surrounded by nature at its best,
+              Calm yourself,focus and let magic do the rest.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End POEMS Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg" style="background-color: rgb(66, 66, 66)">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 style="color: #e4e4e4;" data-aos="fade-right" data-aos-delay="300">Our Free Services</h2>
+          <p data-aos="fade-left" data-aos-delay="300"  style="color: black;">
+            To Protect the Forest and other Animals Please join Our team and enjoy with us...!
+            All members of our team can get free Travel expense and Health care. <br>
+            Subscribe Now! To get make Movies in Our More Adventure, We'll Search For Natural Omnivores On An Exciting Jungle Trip. 
+            
+          </p>
+        </div>
+
+        <div class="row gy-4" id="service-image">
+
+          <div class="col-lg-4 col-md-6   " data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-mountain-city"></i>
+              </div>
+              <h3>Mountain City</h3>
+              <p>We offer a Place to stay and rest before the Journey. <br>
+              But for the Trip home, we won't no longer sleep at there.
+            In Mountain City, the hotel expenses are Free.</p>
+              <a href="Project.html" class="readmore stretched-link" style="text-decoration:none;">Learn more 
+                <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-bus-front"></i>
+              </div>
+              <h3>Traveling by BUS</h3>
+              <p> As you know, We always offer Free Traveling expense. <br>
+              You can enjoy your Journey with your lovingly Team mates. </p>
+              <a href="Project.html" class="readmore stretched-link" style="text-decoration:none;">Learn more 
+                <i  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 " data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-cup-hot-fill"></i>
+              </div>
+              <h3>Meals and Coffee</h3>
+              <p>We Also offer Delicious food, and also available to keep the crew members from getting tired so that they can participate in the trip Happily. </p>
+              <a href="Project.html" class="readmore stretched-link" style="text-decoration:none;">Learn more 
+                <i  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 " data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-airplane-fill"></i>
+              </div>
+              <h3>Airplane Trip</h3>
+              <p>Some Place will go with air line. <br>
+              Also you don't have to pay. This is Free.</p>
+              <a href="Project.html" class="readmore stretched-link" style="text-decoration:none;">Learn more 
+                <i  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 " data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <h3>Volunteer</h3>
+              <p>If you are a Member in a Team, that means you are a volunteer. <br>
+                "volunteering is an easy way to get involved in practical conservation.</p>
+              <a href="Project.html" class="readmore stretched-link" style="text-decoration:none;">Learn more 
+                <i  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 " data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-battery-charging"></i>
+              </div>
+              <h3>Solor Charging</h3>
+              <p>Some Journey are Tough, so we use solor-plate to get Energy. <br>
+              You can get fell free anytimes, it's very easy to use.</p>
+              <a href="Project.html" class="readmore stretched-link" style="text-decoration:none;">Learn more 
+                <i  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services" style="background-color: #e4e4e4;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg" style="background-image: url(project-img/Amazon1.jpg);" data-aos="zoom-in"
+            data-aos-delay="100"></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3 style="color: rgb(36, 102, 0);">Forests are our life support system</h3>
+            <p>We’re working to end deforestation, protect and restore forests and expand
+               sustainable forest management to help the people and species which depend on them.</p>
+
+            <div class="icon-box d-flex position-relative   " data-aos="fade-up" data-aos-delay="100"
+              style="color: black">
+              <i class="bi bi-fire flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Forest Fire</a></h4>
+                <p>
+                   A controlled burn of a strip of forest will create a barrier to an oncoming forest fire as it will use up all the available fuel.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative   " data-aos="fade-up" data-aos-delay="200"
+              style="color: black">
+              <i class="bi bi-calendar2-check-fill flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Life Times</a></h4>
+                <p>Trees, like humans, have a natural life cycle and a finite life span. They grow up, have their peak years, and then they wither and die, eventually.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative   " data-aos="fade-up" data-aos-delay="200"
+              style="color: black">
+              <i class="bi bi-cloud-drizzle-fill flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link ">Rainy Forest</a></h4>
+                <p>Rainforests are Earth's oldest living ecosystems, with some surviving in their present form for at least 70 million years.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative " data-aos="fade-up" data-aos-delay="200"
+              style="color: black">
+              <i class="fas fa-dove flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Birds and Forests</a></h4>
+                <p>Birds keep forests healthy by scattering seeds, pollinating plants, and controlling pests.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Alt Services Section -->
+
+    <!-- email -->
+
+    <!-- ======= Email Section ======= -->
+    <section id="email-started" class="email-started section-bg" style="background-color: #e4e4e4">
+      <div class="container" id="contact">
+
+        <div id="bird2" data-aos="fade-right" data-aos-delay="400">
+          <img src="project-img/bird2.gif" alt="bird2">
+        </div>
+
+        <div class="row justify-content-between gy-4" style="background-color: #e4e4e4">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
+            <div class="content">
+
+
+
+              <h3 data-aos="fadeOut" style="color: rgb(113, 188, 28);">Thanks for <span class="auto-typeA"></span></h3>
+              <p data-aos="fade-up" data-aos-delay="400">Today our forests face a great threat. The climate is changing faster than nature can adapt.
+                 If our forests don’t have a future, we don’t have a future. But it’s not too late to take action.
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-5   " data-aos="fade-left">
+
+
+
+            <form class="email-form">
+
+
+
+              <h3>Subscribe Now!</h3>
+              <p>For just $10 a square metre you could help grow the nation’s forests and protect them for generations to come.</p>
+              <div class="row gy-3">
+
+                <div class="col-md-12">
+                  <input type="text" name="name" class="form-control" placeholder="Name" required>
+                </div>
+
+                <div class="col-md-12 ">
+                  <input type="email" class="form-control" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+
+
+                  <button type="submit">Donate Now >></button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Quote Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Email Started Section -->
+
+
+    <!-- Big Text -->
+    <section class="jumbotron">
+      <div class=" jumbotron-fluid">
+
+        <div class="text-box" data-aos="fade-down" data-aos-delay="100">
+          <p>The</p>
+          <h1>NATURE</h1>
+          <h3>“Save your Life, Save your Memories.”</h3>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="400">
+            <span>
+              You Can Explore More About My Portfolio And <br>
+              Life Experience Here.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- Our Team -->
+
+    <section>
+      <div id="our-team" class="container-fluid text-center bg-grey">
+        <div class="section-header">
+          <h2 data-aos="fade-down" data-aos-delay="400">OUR TEAM</h2>
+          <p data-aos="fade-up" data-aos-delay="400">“Great Things In Business Are Never Done By One Person.
+          They Are Done By a Team of People.” <br>
+          -- Your can read other People's experience in these Images below--</p>
+        </div>
+
+
+
+
+
+        <div class="row" id="space">
+
+
+          <div class="col-md-3 justify-content-between personal-box">
+            <div class="imgBx">
+              <img src="project-img/human2.jpg" alt="">
+            </div>
+            <div class="personal-detail">
+              <h2>“Anna Grace”</h2>
+              <p>Most professional actors rarely generate regular income. <br> I would recommend that newcomers also pursue an additional skill/career 
+                 that can offer a constant income to run alongside their acting work which can support investments you make into your acting career, <br>
+                  such as training and marketing tools. <br>
+                The beauty of this business is that you never know what opportunities will come along. <br>
+                 I have known many actors who have been close to throwing in the towel and then an amazing
+                  opportunity comes from nowhere and they are back in the game!</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="col-md-3 justify-content-between personal-box">
+            <div class="imgBx">
+              <img src="project-img/human1.jpg" alt="">
+            </div>
+            <div class="personal-detail">
+              <h2>“Steve & Mike”</h2>
+              <p>“It is really fun. It’s a lot of hard work, even making a five minute film in one semester is really hard,” Mike said.
+                 <br> “But, I really don’t think it matters that you’re an undergraduate. <br> Sometimes the younger you are, the better ideas you have.”</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 justify-content-between personal-box">
+            <div class="imgBx">
+              <img src="project-img/human3.jpg" alt="">
+            </div>
+            <div class="personal-detail">
+              <h2>“Peter Thiel”</h2>
+              <p>Most of us use traveling as a way to make memories, try new food,
+                 and make our Instagram feeds look cool, but travel can also be a lot 
+                 deeper than just a vacation. If you choose your destination wisely,
+                  and then the voyage itself, the people you meet, the foods you sample,
+                   and the experiences you have will mean you've arrived
+                 in a whole new place physically, spiritually, and philosophically.</p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+      </div>
+    </section>
+
+
+
+    <!--  portfolio -->
+    <!-- ----- Gallery Section ----- -->
+    <section id="gallery" class="gallery" style="background-color: #e4e4e4">
+
+
+      <div class="section-header">
+
+        <h2 data-aos="fade-right" data-aos-delay="400">This Our Portfolio</h2>
+        <p data-aos="fade-left" data-aos-delay="400">“If you were looking for a sign, here it is.” <br>
+          “Remember that happiness is a way of travel, not a destination.” 
+        </p>
+      </div>
+
+
+      <div class="container-fluid">
+
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-1.jpg" class="img-fluid" alt="gallery-1">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-1.jpg"  title="Gallery 1" class="glightbox preview-link" style="text-decoration:none;" >
+                  <i  class="bi bi-arrows-angle-expand"></i></a>                               
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-2.jpg" class="img-fluid" alt="gallery-2">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-2.jpg" title="Gallery 2" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-3.jpg" class="img-fluid" alt="gallery-3">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-3.jpg" title="Gallery 3" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-4.jpg" class="img-fluid" alt="gallery-4">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-4.jpg" title="Gallery 4" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-left" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-5.jpg" class="img-fluid" alt="gallery-5">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-5.jpg" title="Gallery 5" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-left" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-6.jpg" class="img-fluid" alt="gallery-6">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-6.jpg" title="Gallery 6" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-left" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-7.jpg" class="img-fluid" alt="gallery-7">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-7.jpg" title="Gallery 7" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-left" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-8.jpg" class="img-fluid" alt="gallery-8">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-8.jpg" title="Gallery 8" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-9.jpg" class="img-fluid" alt="gallery-9">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-9.jpg" title="Gallery 9" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-10.jpg" class="img-fluid" alt="gallery-10">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-10.jpg" title="Gallery 10" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-11.jpg" class="img-fluid" alt="gallery-11">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-11.jpg" title="Gallery 11" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+            <div class="gallery-item h-100">
+              <img src="project-img/gallery/gallery-12.jpg" class="img-fluid" alt="gallery-12">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-img/gallery/gallery-12.jpg" title="Gallery 12" class="glightbox preview-link" style="text-decoration:none;">
+                  <i  class="bi bi-arrows-angle-expand"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+    </section>
+    
+    
+    <!-- End Gallery Section -->
+
+
+
+
+
+    <!-- ---- Testimonials Section ------- -->
+
+    <section id="testimonials" class="testimonials section-bg">
+      <div id="bird1" data-aos="fade-right" data-aos-delay="300">
+        <img src="./project-img/bird1.webp" alt="bird1">
+      </div>
+      <div class="container" data-aos="fade-up">
+
+
+        <div class="section-header">
+          <h2 data-aos="fade-right" data-aos-delay="200">Team Activator</h2>
+          <p data-aos="fade-left" data-aos-delay="400">This is our previous team's recommendations.</p>
+        </div>
+
+        <div class="slides-2 swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="project-img/team/testimonials-1.webp" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Cameraman</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Being a cameraman in the jungle can be incredibly challenging, but it's also an incredibly rewarding experience.
+                     The harsh terrain and unpredictable weather can make it difficult to capture the perfect shot,
+                     but it's all worth it when you finally get that amazing footage of a rare animal in its natural habitat.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="project-img/team/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Producer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    As a producer working in the jungle, I've had to oversee productions in some of the most challenging environments on earth.
+                    The heat, humidity, and difficult terrain can make it extremely difficult to keep everything running smoothly.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="project-img/team/testimonial-5.webp" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Actress</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    working in the jungle can also be incredibly fulfilling.
+                     There's a sense of adventure and excitement that comes with working in such a raw and untamed environment,
+                     and being able to bring a character to life in such a unique setting is a truly unforgettable experience.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+  <!------ Footer ------>
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="footer-info">
+              <h3>Nature</h3>
+              <p>
+                A108 Myanmar <br>
+                YNG 535022, Yangon<br><br>
+                <strong>Phone:</strong> +95 444 555 666<br>
+                <strong>Email:</strong> info@nature.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+
+          </div><!-- End footer info column-->
+
+          <div class="col-md-4 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+          <!-- End footer links column-->
+
+
+
+          <div class="footer-legal text-center position-relative">
+            <div class="container">
+              <div class="copyright">
+                Developed by<strong> Khant Nyi Thway</strong> 
+              </div>
+              <div class="credits">
+
+
+
+
+              Structure Desgin from <a href="https://getbootstrap.com/" style="text-decoration:none;">©️Boostrap</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+
+    <script src="vendor/jquery/Jquery.3.6.3.min.js"></script>
+    <script>
+      // -----------------------------Loader------------------------------//
+
+      $(window).on('load', function () {
+        let element = $('#loadingArea');
+        element.fadeOut(800);
+        // $('.banner').show();              < error
+
+      });
+
+
+      //----------------------------- Scroll Top----------------------------//   
+
+      //  javascript testing
+
+      // let scrollTop = scrollTop;
+      // let togglescrollTop = togglescrollTop;                  
+
+
+      // scrollTop = document.querySelector('.scroll-top');      
+
+
+      // if (scrollTop) {
+      //   togglescrollTop = function () {
+      //     window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');     <Done>
+      //       
+      //   }
+      //
+      //   window.addEventListener('load', togglescrollTop);              //call togglescrollTop function  <Done>
+      //   document.addEventListener('scroll', togglescrollTop);
+      //   scrollTop.addEventListener('click', window.scrollTo({             //body animate scroll smooth 
+      //     top: 0,
+      //     behavior: 'smooth'
+      //   }));
+      // }                                   < cancel >
+
+
+      //  Jquery
+
+      //---------------------copy---------------
+
+      // $(document).ready(() => {
+      //   $(window).scroll(() => {
+      //     let winTop = $(window).scrollTop();                     // vertical scroll position
+      //     console.log(winTop);                         
+      //     let animationObjects = $('.slideAnimationObject');
+
+      //     animationObjects.each(function () {
+      //       let element = $(this);
+      //       let elementTopPosition = element.offset().top;
+      //       if (winTop > elementTopPosition - 600) {
+      //         element.addClass('slide');
+      //       }
+      //     });
+
+      //   }); 
+      // });                                 < cancel >
+
+
+
+      $(document).ready(function () {
+        let $scrollTop = $('.scroll-top');  
+
+        if ($scrollTop.length) {
+
+          let togglescrollTop = function () {
+            $(window).scrollTop() > 100 ? $scrollTop.addClass('active') :   
+              $scrollTop.removeClass('active');
+
+          };
+
+          $(window).on('load', togglescrollTop);
+          $(document).on('scroll', togglescrollTop);
+
+          $scrollTop.on('click', function () {
+            $('html, body').animate({
+              scrollTop: 0
+            }, 'slow');
+          });
+        }
+      });
+
+      // ------------------------------auto type-----------------------------------
+      var typed = new Typed(".auto-type", {
+        strings: ["is material.", "is infinite.","is physical."],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: 'true'
+      })
+
+      var typed = new Typed(".auto-typeA", {
+        strings: ["Your Donation!", "Supporting with us!", "Your Time!"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        loop: 'true'
+      })
+
+
+
+      // Init swiper slider with 1 slide at once in desktop view
+
+      new Swiper('.slides-1', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+
+
+      //  Init swiper slider with 2 slides at once in desktop view
+
+      new Swiper('.slides-2', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          }
+        }
+      });
+
+      //---------------big-text----------------------
+
+      $(".jumbotron").css({ height: $(window).height() + "px" });
+
+      $(window).on("resize", function () {
+        $(".jumbotron").css({ height: $(window).height() + "px" });
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+      //------------------------------- AOS script--------------------------------
+      function aos_init() {
+        AOS.init({
+          duration: 800,
+          easing: 'slide',
+          once: true,
+          mirror: false
+        });
+      }
+      window.addEventListener('load', () => {
+        aos_init();
+      });
+
+
+
+
+    </script>
+</body>
+
+</html>

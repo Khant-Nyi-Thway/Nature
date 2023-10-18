@@ -1,0 +1,71 @@
+.jumbotron {
+    color: white;
+    background-image: url("project-img/bc3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.jumbotron-fluid div {
+    margin-left: 5%;
+}
+
+.text-box {
+
+    color: #fff;
+    position: flex;
+    bottom: 8%;
+}
+
+.text-box p {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.text-box h1 {
+    font-size: 150px;
+    line-height: 160px;
+    margin-left: -10px;
+    font-family: sans-serif;
+    /*  fixed */
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url("big-text-img/back.png");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+/* fixed here */
+
+
+
+
+
+.text-box h3 {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.text-box .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.text-box a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+}
